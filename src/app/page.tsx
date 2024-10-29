@@ -1,4 +1,3 @@
-import { Table, TableBody, TableRow, TableHeader } from "@/components/ui/table"
 import useCase from "../../public/usecase.png"
 import Image from "next/image"
 
