@@ -1,5 +1,6 @@
 import { Table, TableBody, TableRow, TableHeader } from "@/components/ui/table"
-
+import useCase from "../../public/usecase.png"
+import Image from "next/image"
 
 export default function Home() {
 
@@ -175,6 +176,8 @@ export default function Home() {
         <p className="pl-[5.3rem] pt-6">
         A következő szakasz részletezi a Learnify e-learning platform alapvető funkcionális követelményeit, amelyek biztosítják a platform hatékony és felhasználóbarát működését. A funkciókat természetes nyelven fogalmazzuk meg, és szükség esetén use case diagramokkal illusztráljuk. Az egyes funkciókat a rendszer fő szolgáltatásai és moduljai mentén csoportosítjuk, hogy a követelmények átlátható módon jelenjenek meg.
         </p>
+
+        <Image className="pl-[5.3rem]" src={useCase} alt="Use Case Diagram" width={600} height={600} />
 
         <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.1. Első követelmény: Tanfolyamok kezelése</h2>
 
