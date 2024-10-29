@@ -1,5 +1,3 @@
-import { Table, TableBody, TableRow, TableHeader } from "@/components/ui/table";
-
 export default function UserGuidebook() {
     const tableOfContents = [
         { number: "1.", title: "Bevezetés", id: "bevezetes" },
@@ -9,7 +7,6 @@ export default function UserGuidebook() {
         { number: "5.", title: "Kurzus Felvétele", id: "kurzus-felvetele" },
         { number: "6.", title: "Bevételkezelés", id: "bevetelkezeles" },
         { number: "7.", title: "Felhasználói Profil", id: "felhasznaloi-profil" },
-        { number: "8.", title: "Gyakran Ismételt Kérdések", id: "gyik" },
     ];
 
     return (
@@ -18,8 +15,18 @@ export default function UserGuidebook() {
             Felhasználói Kézikönyv - Learnify Platform
           </h1>
     
+          <nav>
+            <ul>
+              {tableOfContents.map(item => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`}>{item.number} {item.title}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+    
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">1. Bevezetés</h2>
+            <h2 id="bevezetes" className="text-xl font-bold text-sky-600 pt-6">1. Bevezetés</h2>
             <p className="mb-4">
               Üdvözöljük a <strong>Learnify</strong> platformon! A Learnify célja, hogy egy mindenki számára elérhető
               e-learning térként szolgáljon, ahol a felhasználók saját tananyagaikat hozhatják létre és oszthatják meg,
@@ -28,7 +35,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">2. Platform Áttekintés</h2>
+            <h2 id="platfrom-attekintes"  className="text-xl font-bold text-sky-600 pt-6">2. Platform Áttekintés</h2>
             <p className="mb-4">
               A Learnify lehetőséget biztosít mindenkinek, hogy kurzusokat készítsen és osszon meg, valamint hogy
               különböző témájú tananyagokat fedezzen fel és tanuljon új dolgokat.
@@ -36,7 +43,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">3. Kurzusok Keresése és Böngészése</h2>
+            <h2 id="kurzus-letrehozasa" className="text-xl font-bold text-sky-600 pt-6">3. Kurzusok Keresése és Böngészése</h2>
             <p className="mb-4">
               A keresési funkció segítségével a felhasználók gyorsan megtalálhatják a számukra megfelelő kurzusokat.
             </p>
@@ -54,7 +61,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">4. Kurzus Létrehozása és Beállítása</h2>
+            <h2 id="kereses-ertekeles" className="text-xl font-bold text-sky-600 pt-6">4. Kurzus Létrehozása és Beállítása</h2>
             <p className="mb-4">
               A kurzus létrehozásához kövesse az alábbi lépéseket:
             </p>
@@ -72,7 +79,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">5. Kurzusok Értékelése és Véleményezése</h2>
+            <h2 id="kurzus-felvetele" className="text-xl font-bold text-sky-600 pt-6">5. Kurzusok Értékelése és Véleményezése</h2>
             <p className="mb-4">
               A tanulók értékelhetik a kurzusokat, hogy visszajelzést adjanak a készítőknek és segíthessenek más
               felhasználóknak a választásban.
@@ -80,7 +87,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">6. Bevételkezelés</h2>
+            <h2 id="bevetelkezeles" className="text-xl font-bold text-sky-600 pt-6">6. Bevételkezelés</h2>
             <p className="mb-4">
               A kurzuskészítők bevételeket szerezhetnek, ha fizetős tananyagokat hoznak létre. A bevételek kezelése
               egyszerű és átlátható a platform pénzügyi oldalán.
@@ -88,7 +95,7 @@ export default function UserGuidebook() {
           </section>
     
           <section>
-            <h2 className="text-xl font-bold text-sky-600 pt-6">7. Felhasználói Profil és Előrehaladás</h2>
+            <h2 id="felhasznaloi-profil" className="text-xl font-bold text-sky-600 pt-6">7. Felhasználói Profil és Előrehaladás</h2>
             <p className="mb-4">
               A felhasználói profil alatt nyomon követheti tanulási előrehaladását, elvégzett kurzusait és értékeléseit.
             </p>
