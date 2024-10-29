@@ -1,29 +1,10 @@
 export default function UserGuidebook() {
-    const tableOfContents = [
-        { number: "1.", title: "Bevezetés", id: "bevezetes" },
-        { number: "2.", title: "Platform Áttekintés", id: "platform-attekintes" },
-        { number: "3.", title: "Kurzus Létrehozása", id: "kurzus-letrehozasa" },
-        { number: "4.", title: "Kurzus Keresés és Értékelés", id: "kereses-ertekeles" },
-        { number: "5.", title: "Kurzus Felvétele", id: "kurzus-felvetele" },
-        { number: "6.", title: "Bevételkezelés", id: "bevetelkezeles" },
-        { number: "7.", title: "Felhasználói Profil", id: "felhasznaloi-profil" },
-    ];
 
     return (
         <div className="font-sans text-gray-800 p-6">
-          <h1 className="text-3xl text-center text-blue-600 mt-8 mb-4">
+          <h1 className="text-3xl text-center text-sky-600 mt-8 mb-4 font-bold">
             Felhasználói Kézikönyv - Learnify Platform
           </h1>
-    
-          <nav>
-            <ul>
-              {tableOfContents.map(item => (
-                <li key={item.id}>
-                  <a href={`#${item.id}`}>{item.number} {item.title}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
     
           <section>
             <h2 id="bevezetes" className="text-xl font-bold text-sky-600 pt-6">1. Bevezetés</h2>

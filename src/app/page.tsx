@@ -611,7 +611,6 @@ export default function Home() {
           <li><span className="font-bold">Webináriumok és workshopok:</span> A felhasználók számára szervezett webináriumok és workshopok, amelyek a platform funkcióinak mélyebb megismerését és a gamifikációs elemek kihasználását célozzák.</li>
           <li><span className="font-bold">Képzési anyagok:</span> Különböző képzési anyagok, mint például videók, interaktív modulok és útmutatók, amelyek segítik a felhasználókat a platform hatékonyabb használatában.</li>
         </ul>
-
         </div>
 
     </>
