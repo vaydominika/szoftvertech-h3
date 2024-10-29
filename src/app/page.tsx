@@ -11,6 +11,16 @@ export default function Home() {
     { name: "GOMBKÖTŐ ÁBEL MARCELL", code: "C67VWA", email: "gmbkt09@gmail.com" },
   ];
 
+  const history = [
+    { date: "2024. 10. 20.", version: "1.0", description: "Kezdeti verzió, 7. - 9. pontok, 12. - 13. pontok összeállítása", author: "Ardon Milán, Kovács Attila Marcell" },
+    { date: "2024. 10. 22.", version: "1.1", description: "A bevezetés és áttekintés megírása", author: "Vay Dominika" },
+    { date: "2024. 10. 23.", version: "1.2", description: "4. - 6. pontok összeállítása", author: "Tóth Mátyás" },
+    { date: "2024. 10. 26.", version: "1.3", description: "A felhasznált kész komponensek megadása", author: "Gomkötő Ábel Marcell" },
+    { date: "2024. 10. 27.", version: "1.4", description: "Interfészek fejezet összeállítása", author: "Vay Dominika" },
+    { date: "2024. 10. 27.", version: "1.5", description: "Angol megfelelők kigyűjtése, hozzáadása", author: "Vay Dominika" },
+    { date: "2024. 10. 28.", version: "2.0", description: "A dokumentum integrálása NextJS környezetbe, végső verzió áttekintése", author: "Tóth Mátyás" },
+  ];
+
   const tableOfContents = [
     { number: "1.", title: "Bevezetés", id: "bevezetes" },
     { number: "2.", title: "Áttekintés", id: "attekintes" },
@@ -65,6 +75,28 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center justify-center mb-16">
+          <h1 className="text-4xl mb-8">Történet - History</h1>
+          <table className="mb-16 border-collapse">
+            <tbody>
+               <tr>
+                  <th className="border border-black p-4 text-lg">Dátum</th>
+                  <th className="border border-black p-4 text-lg">Verzió</th>
+                  <th className="border border-black p-4 text-lg">Leírás</th>
+                  <th className="border border-black p-4 text-lg">Szerző</th>
+               </tr>
+              {history.map((entry, index) => (
+                <tr key={index}>
+                  <td className="border border-black p-4 text-lg">{entry.date}</td>
+                  <td className="border border-black p-4 text-lg">{entry.version}</td>
+                  <td className="border border-black p-4 text-lg">{entry.description}</td>
+                  <td className="border border-black p-4 text-lg">{entry.author}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="flex flex-col items-center justify-center mb-16">
           <h1 className="text-4xl mb-8">Tartalomjegyzék</h1>
           <table className="mb-16 border-collapse underline text-blue-600 hover:text-blue-900 transition-colors duration-200 border-black">
             <tbody>
@@ -84,15 +116,15 @@ export default function Home() {
         <h2 id="bevezetes" className="ml-8 text-xl font-bold text-sky-600 pt-6">1. Bevezetés - Introduction</h2>
 
         <p className="pl-[5.3rem] pt-6">
-        Az oktatás és tanulás folyamatosan változó és fejlődő terület, ahol a digitális platformok egyre nagyobb szerepet játszanak. Az e-learning megoldások a korábbi években jelentős fejlődésen mentek keresztül, és mára kulcsfontosságú eszközzé váltak mind az oktatási intézmények, mind a vállalati képzések számára. Ezen változó igények kielégítésére született meg a Learnify e-learning platform ötlete, amely nem csak hagyományos tanulási eszközöket kínál, hanem modern, gamifikációs elemekkel is kibővíti a tanulási élményt, ezzel ösztönözve és motiválva a felhasználókat a hatékonyabb tanulásra.
+        Az oktatás és tanulás folyamatosan változó és fejlődő terület, ahol a digitális platformok egyre nagyobb szerepet játszanak. Az e-learning megoldások a korábbi években jelentős fejlődésen mentek keresztül, és mára kulcsfontosságú eszközzé váltak a diákok számára. Ezen változó igények kielégítésére született meg a Learnify e-learning platform ötlete, amely nem csak hagyományos tanulási eszközöket kínál, hanem modern, gamifikációs elemekkel is kibővíti a tanulási élményt, ezzel ösztönözve és motiválva a felhasználókat a hatékonyabb tanulásra.
         </p>
 
         <p className="pl-[5.3rem] pt-6">
-        A Learnify célja, hogy minden korosztály számára elérhető, élvezetes és eredményes oktatási élményt nyújtson. A platform alkalmazkodó felépítése révén különböző tanulási stílusokat és szinteket támogat, személyre szabott tanulási útvonalakat kínálva. A gamifikációs elemek beépítése pedig lehetőséget biztosít a felhasználóknak, hogy jutalmazásokkal, szintlépésekkel és egyéb motivációs elemekkel érjék el céljaikat. Az ilyen játékos megközelítés jelentősen növeli a felhasználók elkötelezettségét és érdeklődését, így hatékonyabb tanulási folyamatot eredményez.
+        A Learnify célja, hogy minden korosztály számára elérhető, élvezetes és eredményes oktatási élményt nyújtson, tekitve hogy a tananyagokat is felhasználók írják és értékelik. A platform alkalmazkodó felépítése révén különböző tanulási stílusokat és szinteket támogat, személyre szabott tanulási útvonalakat kínálva. A gamifikációs elemek beépítése pedig lehetőséget biztosít a felhasználóknak, hogy jutalmazásokkal, szintlépésekkel és egyéb motivációs elemekkel érjék el céljaikat. Az ilyen játékos megközelítés jelentősen növeli a felhasználók elkötelezettségét és érdeklődését, így hatékonyabb tanulási folyamatot eredményez.
         </p>
 
         <p className="pl-[5.3rem] pt-6">
-        A dokumentum bemutatja a Learnify platform részletes szoftverkövetelmény specifikációját, beleértve a rendszer működésének leírását, az üzleti és technikai követelményeket, valamint az interfészekkel kapcsolatos elvárásokat. Az alábbi specifikáció magában foglalja a platform kulcsfontosságú funkcióit, például a tanfolyamok kezelési lehetőségeit, a felhasználói profilok testreszabását, a tanulói teljesítmény értékelését, valamint az interaktív, játékos elemek kialakítását.
+        A dokumentum bemutatja a Learnify platform részletes szoftverkövetelmény specifikációját, beleértve a rendszer működésének leírását, az üzleti és technikai követelményeket, valamint az interfészekkel kapcsolatos elvárásokat. Az alábbi specifikáció magában foglalja a platform kulcsfontosságú funkcióit, például a tanfolyamok kezelési lehetőségeit, a felhasználói profilok testreszabását, valamint az interaktív, játékos elemek kialakítását.
         </p>
 
         <p className="pl-[5.3rem] pt-6">
@@ -104,7 +136,7 @@ export default function Home() {
         </p>
 
         <p className="pl-[5.3rem] pt-6">
-        Végső soron a Learnify azzal a céllal jött létre, hogy ne csak a tanulás hatékonyságát növelje, hanem egy élvezetes és inspiráló platformot biztosítson a felhasználóknak. A platform dinamikus jellege lehetővé teszi az új technológiák és oktatási trendek integrálását, így a Learnify folyamatosan megújuló, korszerű oktatási élményt kínál. A platform hosszú távú fejlesztése során fontos célkitűzés, hogy folyamatosan visszajelzéseket gyűjtsön a felhasználóktól és ez alapján javítsa az élményt és a funkciókat. A Learnify nem csupán egy oktatási eszköz kíván lenni, hanem egy közösségi tanulási tér is, ahol a felhasználók ösztönözve érzik magukat a tudás megszerzésére és megosztására.
+        Végső soron a Learnify azzal a céllal jött létre, hogy ne csak a tanulás hatékonyságát növelje, hanem egy élvezetes és inspiráló platformot biztosítson a felhasználóknak. A platform dinamikus jellege lehetővé teszi az új technológiák és oktatási trendek integrálását, így a Learnify folyamatosan megújuló, korszerű oktatási élményt kínál. A platform hosszú távú fejlesztése során fontos célkitűzés, hogy folyamatosan visszajelzéseket gyűjtsön a felhasználóktól és ez alapján javítsa az élményt és a funkciókat. A Learnify nem csupán egy tanulási eszköz kíván lenni, hanem egy közösségi tér is, ahol a felhasználók ösztönözve érzik magukat a tudás megszerzésére és megosztására.
         </p>
 
         <h2 id="attekintes" className="ml-8 text-xl font-bold text-sky-600 pt-6">2. Áttekintés - Overview</h2>
@@ -179,20 +211,20 @@ export default function Home() {
         <ul className="pl-[5.3rem] pt-6 list-disc">
           <li className="mb-4">
               <li><span className="font-bold pt-6">Use Case Neve:</span> Feladat- és tesztkezelés.</li>
-              <li><span className="font-bold">Rövid leírás:</span> A tanárok létrehozhatnak feladatokat és teszteket, amelyek automatikusan értékelhetők, vagy amelyek kézi értékelést igényelnek, míg a diákok visszajelzést kapnak eredményeikről.</li>
-              <li><span className="font-bold">Prekondíciók:</span> A tanár be van jelentkezve, és rendelkezik tanfolyam adminisztrációs jogokkal.</li>
+              <li><span className="font-bold">Rövid leírás:</span> A kurzuskészítők létrehozhatnak feladatokat és teszteket a kurzusaikban, amelyek automatikusan kiértékelődnek, míg a diákok visszajelzést kapnak eredményeikről.</li>
+              <li><span className="font-bold">Prekondíciók:</span> A kurzuskészítő be van jelentkezve, és rendelkezik a saját tanfolyamai feletti adminisztrációs jogokkal.</li>
               <li><span className="font-bold">Postkondíciók:</span> A diákok elérhetik és kitölthetik a teszteket, és eredményeik automatikusan rögzítésre kerülnek a rendszerben.</li>
               <li><span className="font-bold">Szokásos működés:</span>
               <ol className="pl-4 list-decimal list-inside">
-                <li>A tanár kiválasztja a tanfolyamot, majd hozzáad egy új tesztet vagy feladatot.</li>
+                <li>A kurzuskészítő kiválasztja a tanfolyamot, majd hozzáad egy új tesztet vagy feladatot.</li>
                 <li>Beállítja a teszt kérdéseit, válaszokat és pontozást, majd elérhetővé teszi a diákok számára.</li>
                 <li>
-                A diák kitölti a tesztet, és az eredmény azonnal megjelenik a profiljában.</li>
+                A diák ha elérte azt a pontot a kurzusban, hogy kitöltheti a tesztet, akkor kitölti a tesztet, és az eredmény azonnal megjelenik a profiljában.</li>
               </ol>
               </li>
               <li><span className="font-bold">Alternatív esetek:</span>
               <ol className="pl-4 list-decimal list-inside">
-                <li>A teszt kézi értékelést igényel, így az eredmény csak a tanár értékelése után jelenik meg.</li>
+                <li>A teszt kézi értékelést igényel, így az eredmény csak az AI értékelése után jelenik meg.</li>
               </ol>
               </li>
               <li><span className="font-bold">Kivételes esetek:</span>
@@ -368,7 +400,7 @@ export default function Home() {
 
         <h2 id="tervezesikorlatozasok" className="ml-8 text-xl font-bold text-sky-600 pt-6">8.4. Újrahasználható elemek</h2>
 
-        <p className="pl-[5.3rem] pt-6">A rendszerbe beépítendő újrahasználható elemek közé tartoznak a Spring Framework és a Hibernate ORM, amelyek megkönnyítik a fejlesztést és csökkentik a kód redundanciáját. A Spring Framework biztosítja az alkalmazás modularitását és a konfiguráció egyszerűségét, míg a Hibernate ORM segíti az adatbázis-kezelést és a lekérdezések optimalizálását. Ezek az elemek javítják a fejlesztési folyamat hatékonyságát és gyorsítják az implementációt.</p>
+        <p className="pl-[5.3rem] pt-6">A rendszerbe beépítendő újrahasználható elemek közé tartozik a NextJS, amely megkönnyíti a fejlesztést és csökkentik a kód redundanciáját. A NextJS biztosítja az alkalmazás modularitását és a konfiguráció egyszerűségét, segíti az adatbázis-kezelést és a lekérdezések optimalizálását. Ezek az elemek javítják a fejlesztési folyamat hatékonyságát és gyorsítják az implementációt.</p>
 
         <h2 id="tervezesikorlatozasok" className="ml-8 text-xl font-bold text-sky-600 pt-6">8.5. Fejlesztési módszertan</h2>
 
@@ -398,31 +430,10 @@ export default function Home() {
 
         <p className="pl-[5.3rem] pt-6">A Learnify e-learning platform fejlesztése során számos harmadik féltől származó komponenst tervezünk integrálni a rendszerbe. Ezek a komponensek segítenek a fejlesztési folyamat felgyorsításában, a költségek csökkentésében és a felhasználói élmény fokozásában. Az alábbiakban részletezzük a felhasználni kívánt komponenseket, azok beszerzési körülményeit, költségeit és a vonatkozó licenszelési szabályokat.</p>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.1. Tananyagkezelő rendszer (LMS)</h2>
 
-        <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
-          <li><span className="font-bold">Komponens neve:</span> Moodle</li>
-          <li><span className="font-bold">Típus:</span> Nyílt forráskódú e-learning platform</li>
-          <li><span className="font-bold">Forrás:</span> Moodle.org</li>
-          <li><span className="font-bold">Licensz:</span> GNU General Public License</li>
-          <li><span className="font-bold">Költségek:</span> Ingyenes, de a hosting és a karbantartás költségeivel számolni kell.</li>
-          <li><span className="font-bold">Használati feltételek:</span> A Moodle a GNU GPL licensz alatt áll, ami lehetővé teszi a szabad felhasználást, módosítást és terjesztést, amennyiben a származékos munkák is azonos licensz alatt kerülnek kiadásra.</li>
-          <li><span className="font-bold">Következmények:</span> A Moodle használata esetén figyelembe kell venni a közösségi támogatás mértékét és a pluginok kompatibilitását.</li>
-        </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.2. Gamifikációs keretrendszer</h2>
 
-        <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
-          <li><span className="font-bold">Komponens neve:</span> Gamify</li>
-          <li><span className="font-bold">Típus:</span> Harmadik féltől származó API</li>
-          <li><span className="font-bold">Forrás:</span> Gamify.com</li>
-          <li><span className="font-bold">Licensz:</span> Fizetős szolgáltatás</li>
-          <li><span className="font-bold">Költségek:</span> Éves előfizetési díj, amely körülbelül 5000 USD-ra tehető, a felhasználói szám és az igényelt funkciók függvényében.</li>
-          <li><span className="font-bold">Használati feltételek:</span> A Gamify használata során be kell tartani a felhasználási szerződésben foglaltakat, amely kiterjed a felhasználói adatok kezelésére és a jogi felelősségvállalásra.</li>
-          <li><span className="font-bold">Következmények:</span> A Gamify szolgáltatásainak használata esetén biztosítani kell a megfelelő adatvédelmet, és figyelni kell a felhasználói élmény folyamatos optimalizálására.</li>
-        </ul>
-
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.3. Statisztikai és analitikai eszköz</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.1. Statisztikai és analitikai eszköz</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
           <li><span className="font-bold">Komponens neve:</span> Google Analytics</li>
@@ -434,19 +445,8 @@ export default function Home() {
           <li><span className="font-bold">Következmények:</span> AA Google Analytics használata során ügyelni kell a GDPR betartására, és biztosítani kell a felhasználói adatok védelmét.</li>
         </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.4. Tartalomkezelő rendszer (CMS)</h2>
 
-        <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
-          <li><span className="font-bold">Komponens neve:</span> Moodle</li>
-          <li><span className="font-bold">Típus:</span> Nyílt forráskódú e-learning platform</li>
-          <li><span className="font-bold">Forrás:</span> Moodle.org</li>
-          <li><span className="font-bold">Licensz:</span> GNU General Public License</li>
-          <li><span className="font-bold">Költségek:</span> Ingyenes, de a hosting és a karbantartás költségeivel számolni kell.</li>
-          <li><span className="font-bold">Használati feltételek:</span> A Moodle a GNU GPL licensz alatt áll, ami lehetővé teszi a szabad felhasználást, módosítást és terjesztést, amennyiben a származékos munkák is azonos licensz alatt kerülnek kiadásra.</li>
-          <li><span className="font-bold">Következmények:</span> A Moodle használata esetén figyelembe kell venni a közösségi támogatás mértékét és a pluginok kompatibilitását.</li>
-        </ul>
-
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.5. Kép- és videószerkesztő eszköz</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.2. Kép- és videószerkesztő eszköz</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
           <li><span className="font-bold">Komponens neve:</span> Adobe Photoshop</li>
@@ -459,7 +459,7 @@ export default function Home() {
         </ul>
 
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.6. Webes analitikai keretrendszer</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.3. Webes analitikai keretrendszer</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
           <li><span className="font-bold">Komponens neve:</span> Hotjar</li>
@@ -471,7 +471,7 @@ export default function Home() {
           <li><span className="font-bold">Következmények:</span> A Hotjar használatakor figyelemmel kell kísérni a felhasználói visszajelzéseket, hogy javítsuk a platform teljesítményét és a felhasználói élményt.</li>
         </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.7. E-learning sablonok</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.4. E-learning sablonok</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
           <li><span className="font-bold">Komponens neve:</span> Articulate Storyline</li>
@@ -483,7 +483,7 @@ export default function Home() {
           <li><span className="font-bold">Következmények:</span> A Storyline használata során biztosítani kell a minőségi tananyagok készítését, és figyelemmel kell lenni a felhasználói élményre.</li>
         </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.8. Adatbázis-kezelő rendszer</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.5. Adatbázis-kezelő rendszer</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
           <li><span className="font-bold">Komponens neve:</span> MySQL</li>
@@ -495,29 +495,19 @@ export default function Home() {
           <li><span className="font-bold">Következmények:</span> Az adatbázis-kezelés során figyelni kell a biztonságra és az adatok védelmére.</li>
         </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.9. Felhasználói autentikációs rendszer</h2>
+        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.6. Felhasználói autentikációs rendszer</h2>
 
         <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
-          <li><span className="font-bold">Komponens neve:</span> Auth0</li>
+          <li><span className="font-bold">Komponens neve:</span> Clerk</li>
           <li><span className="font-bold">Típus:</span> Felhasználói azonosítási szolgáltatás</li>
-          <li><span className="font-bold">Forrás:</span> Auth0.com</li>
+          <li><span className="font-bold">Forrás:</span> clerk.com</li>
           <li><span className="font-bold">Licensz:</span> Freemium modell</li>
-          <li><span className="font-bold">Költségek:</span> Az ingyenes verzió 7000 havi aktív felhasználót támogat, a prémium funkciók körülbelül 23 USD-tól kezdődnek.</li>
-          <li><span className="font-bold">Használati feltételek:</span> Az Auth0 használata során be kell tartani a szolgáltatás által meghatározott adatkezelési irányelveket.</li>
+          <li><span className="font-bold">Költségek:</span> Az ingyenes verzió 10000 havi aktív felhasználót támogat, a prémium funkciók körülbelül 25 USD-tól kezdődnek.</li>
+          <li><span className="font-bold">Használati feltételek:</span> Az Clerk használata során be kell tartani a szolgáltatás által meghatározott adatkezelési irányelveket.</li>
           <li><span className="font-bold">Következmények:</span> A felhasználói adatokat a legszigorúbb adatvédelmi előírásoknak megfelelően kell kezelni.</li>
         </ul>
 
-        <h2 id="komponensek" className="ml-8 text-xl font-bold text-sky-600 pt-6">10.10. Tesztelési keretrendszer</h2>
 
-        <ul className="pl-[5.3rem] pt-6 list-disc list-inside">
-          <li><span className="font-bold">Komponens neve:</span> Selenium</li>
-          <li><span className="font-bold">Típus:</span> Nyílt forráskódú automatizált tesztelési keretrendszer</li>
-          <li><span className="font-bold">Forrás:</span> Selenium.dev</li>
-          <li><span className="font-bold">Licensz:</span> Apache License 2.0</li>
-          <li><span className="font-bold">Költségek:</span> Ingyenes</li>
-          <li><span className="font-bold">Használati feltételek:</span> A Selenium szoftver szabadon felhasználható, de a forráskód módosítása során be kell tartani az Apache License 2.0 követelményeit.</li>
-          <li><span className="font-bold">Következmények:</span> A Selenium használatával kapcsolatos tesztelési folyamatokat folyamatosan figyelemmel kell kísérni, hogy a platform hibamentes működését biztosítani tudjuk.</li>
-        </ul>
 
         <h2 id="intefeszek" className="ml-8 text-xl font-bold text-sky-600 pt-6">11. Interfészek - Interfaces</h2>
 
@@ -530,7 +520,7 @@ export default function Home() {
 
           <li><span className="font-bold">Szabványok:</span> A felhasználói interfésznek meg kell felelnie a W3C webes szabványainak, beleértve az akadálymentességet, a HTML5 és CSS3 legjobb gyakorlatainak alkalmazását, valamint a Responsive Web Design (RWD) elveit.</li>
           <li><span className="font-bold">Stílus:</span> A felhasználói felület kialakításakor figyelembe kell venni a modern design trendeket, mint például a minimalista stílust, amely a felhasználói élményt fokozza, és megkönnyíti a navigációt.</li>
-          <li><span className="font-bold">Felhasználói csoportok:</span> A felhasználói interfész testreszabásakor külön figyelmet kell fordítani a különböző felhasználói csoportok (diákok, oktatók, adminisztrátorok) igényeire. A diákok számára intuitív, könnyen navigálható felületet kell kialakítani, míg az oktatók számára bonyolultabb funkciók és eszközök biztosítása szükséges.</li>
+          <li><span className="font-bold">Felhasználói csoportok:</span> A felhasználói interfész testreszabásakor külön figyelmet kell fordítani a felhasználók. A kurzuskitöltők számára intuitív, könnyen navigálható felületet kell kialakítani, míg az kurzuslétrehozók számára bonyolultabb funkciók és eszközök biztosítása szükséges.</li>
           <li><span className="font-bold">Leglényegesebb elemek:</span> A felhasználói felület főbb elemei közé tartozik a navigációs sáv, a keresőmező, a profil beállítások, a tananyagok listája, valamint a visszajelzési és értékelési lehetőségek. Az elemek elrendezése során ügyelni kell a vizuális hierarchiára és a felhasználói élményre.</li>
           <li><span className="font-bold">Akadálymentesség:</span> A felhasználói interfésznek minden felhasználó számára hozzáférhetőnek kell lennie, beleértve a látás-, hallás- vagy mozgáskorlátozott felhasználókat. Az akadálymentesítés érdekében a rendszernek támogatnia kell a képernyőolvasókat és az alternatív navigációs eszközöket.</li>
 
