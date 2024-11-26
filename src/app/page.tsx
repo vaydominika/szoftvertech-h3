@@ -25,7 +25,17 @@ export default function Home() {
     { number: "1.", title: "Bevezetés", id: "bevezetes" },
     { number: "2.", title: "Áttekintés", id: "attekintes" },
     { number: "3.", title: "A rendszer funkciói", id: "rendszerfunkcioi" },
-    { number: "3.1.", title: "Első követelmény", id: "elsokovetelmeny" },
+
+    { number: "3.1.", title: "Első követelmény: Autentikáció", id: "elsokovetelmeny" },
+    { number: "3.2.", title: "Második követelmény: Kurzusok böngészése", id: "masodikkovetelmeny" },
+    { number: "3.3.", title: "Harmadik követelmény: Kurzusok elvégzése", id: "harmadikkovetelmeny" },
+    { number: "3.4.", title: "Negyedik követelmény: Kurzusok mentése", id: "negyedikkovetelmeny" },
+    { number: "3.5.", title: "Ötödik követelmény: Kurzusok értékelése", id: "otodikkovetelmeny" },
+    { number: "3.6.", title: "Hatodik követelmény: Kurzusok létrehozása", id: "hatodikkovetelmeny" },
+    { number: "3.7.", title: "Hetedik követelmény: Kurzusok kezelése", id: "hetedikkovetelmeny" },
+    { number: "3.8.", title: "Nyolcadik követelmény: Profil kezelése", id: "nyolcadikkovetelmeny" },
+    { number: "3.9.", title: "Kilencedik követelmény: Gamifikációs funkciók", id: "kilencedikkovetelmeny" },
+
     { number: "4.", title: "Használhatóság", id: "hasznalhatosag" },
     { number: "5.", title: "Megbízhatóság", id: "megbizhatosag" },
     { number: "6.", title: "Teljesítmény", id: "teljesitmeny" },
@@ -176,121 +186,108 @@ export default function Home() {
         A következő szakasz részletezi a Learnify e-learning platform alapvető funkcionális követelményeit, amelyek biztosítják a platform hatékony és felhasználóbarát működését. A funkciókat természetes nyelven fogalmazzuk meg, és szükség esetén use case diagramokkal illusztráljuk. Az egyes funkciókat a rendszer fő szolgáltatásai és moduljai mentén csoportosítjuk, hogy a követelmények átlátható módon jelenjenek meg.
         </p>
 
-        <Image className="pl-[5.3rem]" src={useCase} alt="Use Case Diagram" width={600} height={600} />
+        <Image unoptimized={true} className="pl-[5.3rem]" src={useCase} alt="Use Case Diagram" width={900} height={900} />
 
-        <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.1. Első követelmény: Tanfolyamok kezelése</h2>
+        <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.1. Első követelmény: Autentikáció</h2>
 
-        <ul className="pl-[5.3rem] pt-6 list-disc">
-          <li className="mb-4">
-              <li><span className="font-bold pt-6">Use Case Neve:</span> Tanfolyamkezelés.</li>
-              <li><span className="font-bold">Rövid leírás:</span> A kurzus létrehozói új tanfolyamokat hozhatnak létre, amelyeket tartalommal tölthetnek fel, módosíthatnak és törölhetnek, míg a diákok regisztrálhatnak a tanfolyamokra, és hozzáférhetnek a tartalomhoz.</li>
-              <li><span className="font-bold">Prekondíciók:</span> A felhasználónak aktív készítői profilhoz kell rendelkeznie a tanfolyam létrehozásához, míg a diákoknak be kell jelentkezniük, hogy hozzáférjenek a tanfolyamhoz.</li>
-              <li><span className="font-bold">Postkondíciók:</span> Az újonnan létrehozott vagy módosított tanfolyam azonnal elérhető a jogosult felhasználók számára.</li>
-              <li><span className="font-bold">Szokásos működés:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A kurzus létrehozója bejelentkezik és kiválasztja a "Tanfolyam létrehozása" opciót.</li>
-                <li>Kitölti a tanfolyam leírását, modulokat, tananyagot és egyéb szükséges információkat.</li>
-                <li>
-                A kurzus létrehozója véglegesíti a tanfolyamot, ami így elérhetővé válik a diákok számára.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Alternatív esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A kurzus létrehozója csak piszkozatként menti a tanfolyamot, amely így még nem érhető el a diákok számára.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Kivételes esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>Hiba lép fel a tananyag feltöltése során.</li>
-                <li>Nincs elegendő tárhely az új tananyag mentésére.</li>
-              </ol>
-              </li>
-          </li>
-          </ul>
+        <p className="pl-[5.3rem] pt-6">A felhasználó kizárólag egy aktív session-el érheti el az oldal funkcióit, "vendégként" nincs lehetőség bármilyen funkciót kipróbálni biztonsági okokból. Egy felhasználó létrehozhat magának egy profilt, vagy bejelentkezhet egy meglévőbe, így létrehozva egy aktív session magának.</p>
 
-        <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.2. Második követelmény: Interaktív feladatok és tesztek kezelése</h2>
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
 
-        <ul className="pl-[5.3rem] pt-6 list-disc">
-          <li className="mb-4">
-              <li><span className="font-bold pt-6">Use Case Neve:</span> Feladat- és tesztkezelés.</li>
-              <li><span className="font-bold">Rövid leírás:</span> A kurzuskészítők létrehozhatnak feladatokat és teszteket a kurzusaikban, amelyek automatikusan kiértékelődnek, míg a diákok visszajelzést kapnak eredményeikről.</li>
-              <li><span className="font-bold">Prekondíciók:</span> A kurzuskészítő be van jelentkezve, és rendelkezik a saját tanfolyamai feletti adminisztrációs jogokkal.</li>
-              <li><span className="font-bold">Postkondíciók:</span> A diákok elérhetik és kitölthetik a teszteket, és eredményeik automatikusan rögzítésre kerülnek a rendszerben.</li>
-              <li><span className="font-bold">Szokásos működés:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A kurzuskészítő kiválasztja a tanfolyamot, majd hozzáad egy új tesztet vagy feladatot.</li>
-                <li>Beállítja a teszt kérdéseit, válaszokat és pontozást, majd elérhetővé teszi a diákok számára.</li>
-                <li>
-                A diák ha elérte azt a pontot a kurzusban, hogy kitöltheti a tesztet, akkor kitölti a tesztet, és az eredmény azonnal megjelenik a profiljában.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Alternatív esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A teszt kézi értékelést igényel, így az eredmény csak az AI értékelése után jelenik meg.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Kivételes esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A teszt kitöltése során technikai hiba lép fel (pl. megszakadt internetkapcsolat).</li>
-              </ol>
-              </li>
-          </li>
-          </ul>
+        <li><span className="font-bold">Regisztráció:</span> Ideálisan a felhasználó első alkalommal regisztrál egy fiókot magának. Ezt a folyamatot a regisztrációs űrlapon teheti meg, ahol meg kell adnia a teljes nevét, az egyedi e-mail címét, egy egyedi felhasználónevet és egy legalább 8 karakterből álló jelszót, amelynek tartalmaznia kell: kisbetűt, nagybetűt, számot és legalább 1 speciális karaktert.
 
-        <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.3. Harmadik követelmény: Gamifikációs funkciók</h2>
+Legelőször a frontend végez ellenőrzéseket, muszáj az összes mezőt kitölteni és formailag meg kell egyeznie az összes mezőnek a megadott követelményeknek.
 
-        <ul className="pl-[5.3rem] pt-6 list-disc">
-          <li className="mb-4">
-              <li><span className="font-bold pt-6">Use Case Neve:</span> Gamifikációs funkciók kezelése</li>
-              <li><span className="font-bold">Rövid leírás:</span> A rendszer jutalmakat és pontokat oszt a felhasználók teljesítményének alapján, amelyek növelik a motivációt.</li>
-              <li><span className="font-bold">Prekondíciók:</span> A felhasználónak be kell jelentkeznie, és részt kell vennie egy tanfolyamon.</li>
-              <li><span className="font-bold">Postkondíciók:</span> A felhasználó profilján megjelennek a megszerzett jelvények és pontok.</li>
-              <li><span className="font-bold">Szokásos működés:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A diák elvégez egy modult, sikeresen megold egy feladatot vagy elér egy új szintet.</li>
-                <li>A rendszer automatikusan pontokat oszt ki, és jelvényeket ad a felhasználónak.</li>
-                <li>A felhasználó profilján frissül a ranglista és a megszerzett jutalmak száma.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Alternatív esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A felhasználó dönthet úgy, hogy kikapcsolja a jelvények és pontok megjelenítését a profilján.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Kivételes esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A pontozási rendszer frissítése során adatinkonzisztencia lép fel.</li>
-              </ol>
-              </li>
-          </li>
-          </ul>
+Amennyiben a frontend ellenőrzésein átment a felhasználó, a weboldal kérést küld a MySQL adatbázis felé, melyhez a backenden levő DAO objektumokon keresztül egy POST request segítségével (amely a request bodyban JSON-ban tartalmazza a felhasználó által megadott adatokat) fér hozzá. Ott különböző szűréseken mennek át az adatok például az SQL injection elkerülése végett, illetve ismételten egy ellenőrzést végez rajtuk a backend. Ha az ellenőrzéseken nem mentek át az adatok, abban az esetben rögtön visszatér a request egy hibával, amelyet visszajelez a frontend is.
 
-        <h2 id="elsokovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.4. Negyedik követelmény: Felhasználói profilok és testreszabás</h2>
+Ha az ellenőrzések sikeresek voltak, a jelszót elhasheli a backend SHA-256 segítségével, majd beszúrja az adatbázisba a megadott adatokat és a jelszó helyett csak a hash-ét. A sikeres regisztráció után létrejön egy session, amit egy cookieban tárol el a frontend egy sessionID azonosító segítségével és ez az adatbázisban is megjelenik, hogy egy sessionID melyik felhasználóhoz tartozik.
 
-        <ul className="pl-[5.3rem] pt-6 list-disc">
-          <li className="mb-4">
-              <li><span className="font-bold pt-6">Use Case Neve:</span> Profilkezelés</li>
-              <li><span className="font-bold">Rövid leírás:</span> A felhasználók kezelhetik személyes adataikat, beállításaikat, valamint láthatják a tanulási előrehaladásukat és eredményeiket.</li>
-              <li><span className="font-bold">Prekondíciók:</span> A felhasználó be van jelentkezve.</li>
-              <li><span className="font-bold">Postkondíciók:</span> A profilfrissítések azonnal megjelennek a felhasználói adatok között.</li>
-              <li><span className="font-bold">Szokásos működés:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A felhasználó belép a profiljába és módosítja személyes adatait vagy tanulási beállításait.</li>
-                <li>A rendszer elmenti a módosításokat, és a profil azonnal frissül.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Alternatív esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>A felhasználó jelszóváltoztatást kér, amelyet a rendszer kétlépcsős azonosítással biztosít.</li>
-              </ol>
-              </li>
-              <li><span className="font-bold">Kivételes esetek:</span>
-              <ol className="pl-4 list-decimal list-inside">
-                <li>Hiba lép fel a profilfrissítés során, és az adatok nem mentődnek el.</li>
-              </ol>
-              </li>
-          </li>
-          </ul>
+Innentől kezdve a felhasználó hozzáfér a weboldal funkcióihoz.</li>
+        <li className="pt-6"><span className="font-bold">Bejelentkezés:</span> Ha a felhasználónak már van egy létező fiókja, abban az esetben elnavigálhat a bejelentkezési űrlapra és ott az e-mail címét vagy akár a felhasználónevét megadva és összepárosítva a jelszavával beléphet a weboldalra.
+
+Itt is hasonlóan, az adatok a frontenden és a backenden is átmennek ellenőrzéseken és amennyiben ezek sikeresek, létrejön egy session. Itt is először elhasheli a backend a jelszót és magát a hash-t hasonlítja össze az adatbázisban levő hash-el és csak akkor engedi tovább a rendszer a felhasználót, ha egyezik a 2 hash.</li>
+
+        </ol>
+
+        <h2 id="másodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.2. Második követelmény: Kurzusok böngészése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> A felhasználók böngészhetnek a kurzusok között, keresni lehet kulcsszavakkal, amelyekre a rendszer az adatbázisból a legmegfelelőbb találatokat adja vissza. Továbbá szűrők alkalmazására is van lehetőség, ahol kategóriák, nehézségi szint, nyelv, ár és értékelés alapján szűrhetik ki a kurzusokat, illetve rendezni is lehetk őket, népszerűség, legjobb értékelés, ár és frissítés dátuma szerint. Ha belekattintuk a keresőmezőbe, akkor automatikusan megjelennek a legkeresettebb kulcsszavak</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="harmadikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.3. Harmadik követelmény: Kurzusok elvégzése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> Bármely bejelentkezett felhasználó elvégezhet bármely típusú kurzust. A fizetős kurzusokhoz természetesen csak akkor férnek hozzá, ha a kurzus készítője által meghatározott összeget kifizették az oldalon. A kurzus elvégzéséhez szükséges azokat a kritériumokat teljesíteni, amiket a kurzus létrehozója megszabott, ezek lehetnek különböző hosszúságú és nehézségű tesztek amik a létrehozó által feltöltött hanganyagból, videóanyagból, vagy esetleg képekból és szöveges dokumentumokból állhat.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="negyedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.4. Negyedik követelmény: Kurzusok mentése, kedvencekbe helyezése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> Amennyiben a felhasználó úgy érzi, elmentheti az adott kurzust. Akár csak későbbre, mert megtetszett neki, vagy mert hasznosnak találta. A kurzusok böngészésekor lesz egy csillag ikon a borítókép jobb felső sarkában, arra kattintva el tudja menteni azt a kurzust a kedvencei közé, amit majd később a profiljában tud megtekinteni. Ennek láthatóságát módosíthatja nyílvánosra vagy privátra, attól függően, hogy szeretné-e, hogy mások lássák, mit mentett el.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="otodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.5. Ötödik követelmény: Kurzusok értékelése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> A felhasználó, aki sikeresen elvégezte az adott kurzust, értékelheti azt. Egy 0-5-ig terjedő skálán tudja értékelni a kurzust, ez lehet fél pont is. Továbbá ha szeretne, akár kommentet is hagyhat az értékelés mellé, de ez teljes mértékben opcionális. Miután elvégezte az adott felhasználó a kurzust, fel fog ugrani egy ablak, ahol kéri a rendszer, hogy hagyjon egy értékelést. Minden értékelés 100 XP-t ér.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="hatodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.6. Hatodik követelmény: Kurzusok létrehozása</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> A kurzusok létrehozásához el kell végezni először a kurzuslétrehozó kurzust, amit bármely felhasználó megtehet. Amint ez a követelmény teljesült, a felhasználó szabadon tehet fel kurzusokat, anyagokat a többi felhasználó számára. Természetesen moderálva van minden kurzusunk, tehát trágár kifejezéseket nem tartalmazhat, és csak odaillő témákat dolgozhat fel. Kurzus létrehozásakor meg kell adni a kurzus címét, egy rövidebb leírást, egy borítóképet, és a tetszőleges formátumú tananyagot, ami lehet hanganyag (.mp3), képek (.png, .jpg), szöveges dokumentum (.pdf) vagy videóanyag (.mp4). Illetve ha szeretne a kurzus készítője, készíthet hozzá egy kötelezően elvégzendő tesztet a kurzus végére, hogy a felhasználó csak akkor fejezheti be a kurzust, ha ezt a megadott százalék fölött teljesíti. A kurzus beállítható lesz fizetősre, illetve ingyenesre. Továbbá meg lehet adni a kurzus nehézségét, nyelvét, típusát és a böngészéskor látszódni fognak az értékelések is.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="hetedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.7. Hetedik követelmény: Kurzusok kezelése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> A kurzus létrehozója számára lesznek lehetőségek kezelni a kurzusokat, amiket ő készített. Az adott kurzust lehet majd törölni, ami egy szemeteskuka ikonnal lesz jelölve, illetve lehet majd módosítani mindent adatát a ceruza ikonnal, ezeket majd a profil oldalon a 'kurzusaim' menüpont alatt érheti el a készítő.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="nyolcadikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.8. Nyolcadik követelmény: Profil kezelése</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">Frontend:</span> A felhasználók személyre szabhatják a profiljukat. Lesz lehetőség profilkép (avatar) feltöltésére, továbbá ki lehet majd listázni 0-5 között a felhasználó által elért badge-eket, és a mérföldköveit, heti teljesítményét, ahol az XP szerzést lehet feltüntetni. Nyílvánossá tehetik a kedvelt, elmentett kurzusaikat is.</li>
+        <li><span className="font-bold">Backend:</span></li>
+
+        </ol>
+
+        <h2 id="kilencedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.9. Kilencedik követelmény: Gamifikációs funkciók</h2>
+
+        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+
+        <li><span className="font-bold">XP szerzés:</span> A felhasználók XP-t szerezhetnek különböző tevékenységek során, a leggyakoribb XP szerzési lehetőség a kurzusok elvégzése lesz. Ha egy felhasználó 100%-ra teljesít egy kurzust, azt 1000 XP-vel díjazzuk. Minél kevesebb százalékot ért el, annál kevesebb XP jár érte. A következő képlettel számoljuk: 1000*(elértszázalék/100).</li>
+        <li><span className="font-bold">Szintlépés:</span> A szintlépés rendszere az XP-n fog múlni. A felhasználó minél több XP-t gyűjt, annál nagyobb szintű lesz. Maximum szint, amit el lehet érni az 100.</li>
+        <li><span className="font-bold">Achievementek:</span> Achievementeket egy bizonyos mérföldkő elérésekor fog megkapni a felhasználó. Ezek a teljesítmények előre meghatározottak. Például: Az első 100%-os kurzus elvégzéséért kaphat egy achievementet a felhasználó.</li>
+        <li><span className="font-bold">Badge-ek:</span> Badge az achievementek megszerzéséért jár. Mindegyik Achievementhez járni fog egy adott Badge, amit a felhasználó feltüntethet a profilján.</li>
+        <li><span className="font-bold">Progressz bár:</span> A progressz bár a felhasználó főoldalán és a profilján is látható lesz. Heti teljesítményeket tárolunk, hetente legfeljebb 10.000 XP szerezhető. Ezt a felhasználó feltüntetheti a profilján, hogy az látható legyen a többi felhasználó számára.</li>
+        <li><span className="font-bold">Kihívások, versenyek:</span> Kihívásokat illetve versenyeket az adminok hirdetnek meg, akár már előre beütemezett időpontokban is, de véletlenszerűen is kihirdethetnek majd. Változó tematikájú és időintervallumú versenyek lehetnek. Például: 1 hét alatt minél több kurzus teljesítése, a versenyeken az első 3 helyezett fog kapni XP-t. Az XP arányosan lesz szétosztva, az első helyezett 10.000 XP-t kap, a második helyezett 5000 XP-t kap, és a harmadik helyezett pedig 2500 XP-t kap. A többiek megkapják a részvételért járó limitált kiadású badge-t.</li>
+
+
+
+        </ol>
+
+
 
         <h2 id="hasznalhatosag" className="ml-8 text-xl font-bold text-sky-600 pt-6">4. Használhatóság - Usability</h2>
 
