@@ -209,85 +209,47 @@ Itt is hasonlóan, az adatok a frontenden és a backenden is átmennek ellenőrz
 
         </ol>
 
-        <h2 id="másodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.2. Második követelmény: Kurzusok böngészése</h2>
+        <h2 id="masodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.2. Második követelmény: Kurzusok böngészése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> A felhasználók böngészhetnek a kurzusok között, keresni lehet kulcsszavakkal, amelyekre a rendszer az adatbázisból a legmegfelelőbb találatokat adja vissza. Továbbá szűrők alkalmazására is van lehetőség, ahol kategóriák, nehézségi szint, nyelv, ár és értékelés alapján szűrhetik ki a kurzusokat, illetve rendezni is lehetk őket, népszerűség, legjobb értékelés, ár és frissítés dátuma szerint. Ha belekattintuk a keresőmezőbe, akkor automatikusan megjelennek a legkeresettebb kulcsszavak</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">Az e-learning platform egyik alapvető funkciója a kurzusok böngészése, amely lehetővé teszi a felhasználók számára, hogy könnyedén megtalálják az őket érdeklő tananyagokat. A böngészési élmény optimalizálása érdekében a rendszer különféle keresési és szűrési lehetőségeket biztosít. A felhasználók kulcsszavak beírásával kereshetnek a kurzusok között, amelyre a rendszer az adatbázisban szereplő találatok közül a legmegfelelőbbeket adja vissza. Ezen kívül különféle szűrőket alkalmazhatnak a keresés pontosítására, például kategóriák, nehézségi szintek, nyelvek, árak vagy a kurzus értékelése alapján. A platform továbbá lehetőséget nyújt arra is, hogy a kurzusok listáját rendezni lehessen népszerűség, legjobb értékelés, ár vagy a legutóbbi frissítés dátuma szerint. Amikor egy felhasználó a keresőmezőbe kattint, a rendszer automatikusan megjeleníti a leggyakrabban keresett kulcsszavakat, ezzel is gyorsítva és könnyítve a keresési folyamatot.</p>
 
         <h2 id="harmadikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.3. Harmadik követelmény: Kurzusok elvégzése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
+        <p className="pl-[5.3rem] pt-6">Az oldal használói bármilyen kurzust elvégezhetnek, feltéve, hogy bejelentkeztek a rendszerbe. A fizetős kurzusok elérhetősége azonban a díjak kifizetéséhez kötött, amelyeket az adott kurzus létrehozója határoz meg. A kurzusok elvégzése során a felhasználóknak teljesíteniük kell azokat a kritériumokat, amelyeket a kurzus készítője előzetesen meghatározott. Ezek a kritériumok sokféle formában megjelenhetnek, például különböző hosszúságú és nehézségű tesztek formájában, amelyek alapját a kurzushoz feltöltött tananyag képezi. A tananyag különböző formátumokat tartalmazhat, úgymint hanganyagokat, videókat, képeket és szöveges dokumentumokat. A felhasználóknak a kritériumokat a kurzus befejezéséhez megadott szint felett kell teljesíteniük, így biztosítva a tanulási folyamat eredményességét.</p>
 
-        <li><span className="font-bold">Frontend:</span> Bármely bejelentkezett felhasználó elvégezhet bármely típusú kurzust. A fizetős kurzusokhoz természetesen csak akkor férnek hozzá, ha a kurzus készítője által meghatározott összeget kifizették az oldalon. A kurzus elvégzéséhez szükséges azokat a kritériumokat teljesíteni, amiket a kurzus létrehozója megszabott, ezek lehetnek különböző hosszúságú és nehézségű tesztek amik a létrehozó által feltöltött hanganyagból, videóanyagból, vagy esetleg képekból és szöveges dokumentumokból állhat.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">Sikeres elvégzést követően az elért százalékos eredmény alapján fogja kapni a felhasználó az XP-t automatikusan. A 100%-os teljesítésért fog járni 1000 XP, minél kevesebb százalékot ér el, annál kevesebbet fog kapni. Ezt a következő képlettel lehetséges kiszámolni: 1000*(elértszázalék/100). Ez egy alap, normáls nehézségű kurzushoz tartozik. Amennyiben a kurzus nehézsége nagyobb, vagy kevesebb, úgy fog kapni egy szorzót, hogy a ponteloszlás igazságos legyen.</p>
 
         <h2 id="negyedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.4. Negyedik követelmény: Kurzusok mentése, kedvencekbe helyezése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> Amennyiben a felhasználó úgy érzi, elmentheti az adott kurzust. Akár csak későbbre, mert megtetszett neki, vagy mert hasznosnak találta. A kurzusok böngészésekor lesz egy csillag ikon a borítókép jobb felső sarkában, arra kattintva el tudja menteni azt a kurzust a kedvencei közé, amit majd később a profiljában tud megtekinteni. Ennek láthatóságát módosíthatja nyílvánosra vagy privátra, attól függően, hogy szeretné-e, hogy mások lássák, mit mentett el.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">A rendszer lehetővé teszi a felhasználók számára, hogy az őket érdeklő kurzusokat elmentsék vagy kedvencek közé helyezzék. Ez a funkció különösen hasznos lehet azok számára, akik a jövőben szeretnének egy adott kurzusra visszatérni, vagy egyszerűen hasznosnak találják azt. A kurzusok böngészése közben a felhasználók egy csillag ikont találnak a kurzus borítóképének jobb felső sarkában, amelyre kattintva a kurzus automatikusan bekerül a kedvencek közé. Ezek a mentett kurzusok később a profil oldalon tekinthetők meg, és a felhasználók dönthetnek arról, hogy nyilvánossá teszik-e őket, vagy privátként kezelik ezeket az adatokat. Ezzel a funkcióval lehetőség nyílik arra, hogy a felhasználók saját tanulási preferenciáikhoz igazítsák a platform használatát.</p>
 
         <h2 id="otodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.5. Ötödik követelmény: Kurzusok értékelése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> A felhasználó, aki sikeresen elvégezte az adott kurzust, értékelheti azt. Egy 0-5-ig terjedő skálán tudja értékelni a kurzust, ez lehet fél pont is. Továbbá ha szeretne, akár kommentet is hagyhat az értékelés mellé, de ez teljes mértékben opcionális. Miután elvégezte az adott felhasználó a kurzust, fel fog ugrani egy ablak, ahol kéri a rendszer, hogy hagyjon egy értékelést. Minden értékelés 100 XP-t ér.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">Azon felhasználók, akik sikeresen elvégeztek egy kurzust, lehetőséget kapnak arra, hogy értékeljék azt, amely segíti a platformon található kurzusok minőségének folyamatos fejlesztését. Az értékelés egy ötfokozatú skálán történik, amelyben akár fél pontokat is meg lehet adni a részletesebb visszajelzés érdekében. Emellett opcionálisan szöveges kommentár is hozzáadható az értékelés mellé, amelyben a felhasználó részletesen kifejtheti véleményét a kurzusról. Amint egy kurzus elvégzése befejeződik, a rendszer egy felugró ablakban ösztönzi a felhasználót az értékelésre, ezzel is erősítve az azonnali visszacsatolás lehetőségét. Az értékelési folyamatot tovább motiválja, hogy minden értékelés után a felhasználó 100 XP pontot kap, amely a platform gamifikációs elemei között fontos szerepet tölt be.</p>
 
         <h2 id="hatodikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.6. Hatodik követelmény: Kurzusok létrehozása</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> A kurzusok létrehozásához el kell végezni először a kurzuslétrehozó kurzust, amit bármely felhasználó megtehet. Amint ez a követelmény teljesült, a felhasználó szabadon tehet fel kurzusokat, anyagokat a többi felhasználó számára. Természetesen moderálva van minden kurzusunk, tehát trágár kifejezéseket nem tartalmazhat, és csak odaillő témákat dolgozhat fel. Kurzus létrehozásakor meg kell adni a kurzus címét, egy rövidebb leírást, egy borítóképet, és a tetszőleges formátumú tananyagot, ami lehet hanganyag (.mp3), képek (.png, .jpg), szöveges dokumentum (.pdf) vagy videóanyag (.mp4). Illetve ha szeretne a kurzus készítője, készíthet hozzá egy kötelezően elvégzendő tesztet a kurzus végére, hogy a felhasználó csak akkor fejezheti be a kurzust, ha ezt a megadott százalék fölött teljesíti. A kurzus beállítható lesz fizetősre, illetve ingyenesre. Továbbá meg lehet adni a kurzus nehézségét, nyelvét, típusát és a böngészéskor látszódni fognak az értékelések is.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">A platform biztosítja, hogy a felhasználók saját kurzusokat hozhassanak létre, de ezt megelőzően kötelezően el kell végezniük egy ún. kurzuslétrehozó kurzust. Ez a kezdeti lépés azért szükséges, hogy a létrehozott tananyagok minden esetben megfeleljenek a rendszer által támasztott minőségi követelményeknek, és a tanulók számára érthető, jól strukturált tanulási élményt biztosítsanak. Miután a felhasználó sikeresen teljesítette ezt az előzetes lépést, lehetősége nyílik tananyagai feltöltésére és publikálására.</p>
+        <p className="pl-[5.3rem] pt-6">A kurzus létrehozása során a felhasználónak több lényeges adatot kell megadnia. Az első lépésben meg kell adni a kurzus címét, amely röviden és tömören összefoglalja annak tartalmát. Ezt követően egy leírást kell készíteni, amely a kurzus célját, felépítését és az elérhető tanulási eredményeket mutatja be. Vizualitás szempontjából elengedhetetlen egy borítókép kiválasztása, amely vonzóvá és figyelemfelkeltővé teszi a kurzust a böngésző felhasználók számára.</p>
+        <p className="pl-[5.3rem] pt-6">A keresési élmény javítása érdekében a kurzus létrehozója megadhat címkéket is, amelyek kulcsszóként szolgálnak a tananyag könnyebb megtalálása érdekében. Emellett kötelező a kurzus típusának meghatározása is, amely jelezheti például, hogy az tanulmányi célú, hobbihoz kötődő vagy szakmai fejlődést elősegítő tananyag. Ezek a címkék és kategóriák elősegítik, hogy a felhasználók célzottan találják meg a számukra releváns tananyagokat.</p>
+        <p className="pl-[5.3rem] pt-6">A tananyag feltöltése során a rendszer támogatja a különböző formátumokat, így a kurzus tartalmazhat hanganyagokat (.mp3), videókat (.mp4), képeket (.png, .jpg) és szöveges dokumentumokat (.pdf). A kurzus készítője opcionálisan létrehozhat egy tesztet is, amely a kurzushoz kapcsolódó tananyag elsajátítását méri. A teszt lehetőséget nyújt az ismeretek ellenőrzésére és mélyítésére. A kurzus beállítható fizetősre vagy ingyenesre, megadható a nehézségi szintje, a rendelkezésre álló nyelvek, valamint a hozzá tartozó értékelési szempontok.</p>
 
         <h2 id="hetedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.7. Hetedik követelmény: Kurzusok kezelése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> A kurzus létrehozója számára lesznek lehetőségek kezelni a kurzusokat, amiket ő készített. Az adott kurzust lehet majd törölni, ami egy szemeteskuka ikonnal lesz jelölve, illetve lehet majd módosítani mindent adatát a ceruza ikonnal, ezeket majd a profil oldalon a 'kurzusaim' menüpont alatt érheti el a készítő.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">Azok a felhasználók, akik saját kurzusokat hoztak létre, lehetőséget kapnak arra, hogy kezeljék azokat. A kezelés magában foglalja a kurzus adatainak módosítását, valamint szükség esetén a törlését. Ezek a funkciók a felhasználók profiloldalán, a „kurzusaim” menüpont alatt érhetők el. Az adatok módosítását egy ceruza ikon jelzi, míg a törléshez egy szemeteskuka ikon áll rendelkezésre. Ezen funkciók célja, hogy a felhasználók egyszerűen és hatékonyan tudják karbantartani tananyagaikat.</p>
 
         <h2 id="nyolcadikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.8. Nyolcadik követelmény: Profil kezelése</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">Frontend:</span> A felhasználók személyre szabhatják a profiljukat. Lesz lehetőség profilkép (avatar) feltöltésére, továbbá ki lehet majd listázni 0-5 között a felhasználó által elért badge-eket, és a mérföldköveit, heti teljesítményét, ahol az XP szerzést lehet feltüntetni. Nyílvánossá tehetik a kedvelt, elmentett kurzusaikat is.</li>
-        <li><span className="font-bold">Backend:</span></li>
-
-        </ol>
+        <p className="pl-[5.3rem] pt-6">A platform felhasználói testreszabhatják profiljukat annak érdekében, hogy személyre szabottabb élményt nyújtsanak. Lehetőség van például profilkép (avatar) feltöltésére, továbbá megtekinthetők a felhasználó által elért jelvények és mérföldkövek. A profil tartalmazza a heti teljesítményeket is, ahol az XP szerzés mértékét lehet nyomon követni. A felhasználók dönthetnek arról is, hogy nyilvánossá teszik-e kedvelt vagy elmentett kurzusaikat, így mások is megismerhetik tanulási preferenciáikat.</p>
 
         <h2 id="kilencedikkovetelmeny" className="ml-8 text-xl font-bold text-sky-600 pt-6">3.9. Kilencedik követelmény: Gamifikációs funkciók</h2>
 
-        <ol className="pl-[5.3rem] list-disc list-inside pt-6">
-
-        <li><span className="font-bold">XP szerzés:</span> A felhasználók XP-t szerezhetnek különböző tevékenységek során, a leggyakoribb XP szerzési lehetőség a kurzusok elvégzése lesz. Ha egy felhasználó 100%-ra teljesít egy kurzust, azt 1000 XP-vel díjazzuk. Minél kevesebb százalékot ért el, annál kevesebb XP jár érte. A következő képlettel számoljuk: 1000*(elértszázalék/100).</li>
-        <li><span className="font-bold">Szintlépés:</span> A szintlépés rendszere az XP-n fog múlni. A felhasználó minél több XP-t gyűjt, annál nagyobb szintű lesz. Maximum szint, amit el lehet érni az 100.</li>
-        <li><span className="font-bold">Achievementek:</span> Achievementeket egy bizonyos mérföldkő elérésekor fog megkapni a felhasználó. Ezek a teljesítmények előre meghatározottak. Például: Az első 100%-os kurzus elvégzéséért kaphat egy achievementet a felhasználó.</li>
-        <li><span className="font-bold">Badge-ek:</span> Badge az achievementek megszerzéséért jár. Mindegyik Achievementhez járni fog egy adott Badge, amit a felhasználó feltüntethet a profilján.</li>
-        <li><span className="font-bold">Progressz bár:</span> A progressz bár a felhasználó főoldalán és a profilján is látható lesz. Heti teljesítményeket tárolunk, hetente legfeljebb 10.000 XP szerezhető. Ezt a felhasználó feltüntetheti a profilján, hogy az látható legyen a többi felhasználó számára.</li>
-        <li><span className="font-bold">Kihívások, versenyek:</span> Kihívásokat illetve versenyeket az adminok hirdetnek meg, akár már előre beütemezett időpontokban is, de véletlenszerűen is kihirdethetnek majd. Változó tematikájú és időintervallumú versenyek lehetnek. Például: 1 hét alatt minél több kurzus teljesítése, a versenyeken az első 3 helyezett fog kapni XP-t. Az XP arányosan lesz szétosztva, az első helyezett 10.000 XP-t kap, a második helyezett 5000 XP-t kap, és a harmadik helyezett pedig 2500 XP-t kap. A többiek megkapják a részvételért járó limitált kiadású badge-t.</li>
-
-
-
-        </ol>
-
-
+        <p className="pl-[5.3rem] pt-6">A platform egyik kiemelkedő funkciója a gamifikáció, amely célja, hogy növelje a tanulás iránti elkötelezettséget és motivációt azáltal, hogy játékelemeket integrál a tanulási folyamatba. Az e-learning rendszerben minden elvégzett tevékenység – például egy kurzus befejezése, egy új mérföldkő elérése vagy egy kihívás teljesítése – különböző mennyiségű XP (experience point, azaz tapasztalati pont) megszerzését eredményezi. Az XP gyűjtésével a felhasználók szintet léphetnek, ami vizuálisan is megjelenik a profiljukon, ezzel ösztönözve őket arra, hogy folytassák a tanulást.</p>
+        <p className="pl-[5.3rem] pt-6">A rendszer achievementeket (eredményeket) és badge-eket (kitűzőket) is kínál, amelyek a különféle tanulási mérföldkövek elérését ismerik el. Például a felhasználó kitűzőt kap, ha tíz egymást követő napon aktívan tanul, vagy ha egy adott témában tíz kurzust sikeresen befejez. Ezek az eredmények nemcsak vizuális elismerést nyújtanak, hanem motivációs eszközként is szolgálnak, hiszen a felhasználók versenyezhetnek egymással az elért kitűzők számát tekintve.</p>
+        <p className="pl-[5.3rem] pt-6">A gamifikációs rendszer egy progressz bár segítségével is mutatja a felhasználók előrehaladását, amely különösen a heti teljesítmények követésére szolgál. Ez a funkció lehetőséget ad arra, hogy a felhasználók folyamatosan nyomon kövessék, mennyi XP-t szereztek egy adott időszak alatt, és hogyan teljesítettek a korábbi hetekhez képest.</p>
+        <p className="pl-[5.3rem] pt-6">A rendszerben további ösztönzőként jelennek meg az adminisztrátorok által létrehozott kihívások és versenyek. Ezek az események időszakos jelleggel érhetők el, és a résztvevők számára exkluzív badge-eket és nagyobb mennyiségű XP-t kínálnak, ha sikeresen teljesítik őket. Például egy kihívás lehet az, hogy a felhasználó egy hét alatt végezzen el három különböző kurzust, vagy vegyen részt egy közösségi tanulási eseményen.</p>
+        <p className="pl-[5.3rem] pt-6">A felhasználók a profiloldalukon tekinthetik meg az összes megszerzett badge-et és achievementet, amely nemcsak személyes motivációként szolgál, hanem egy közösségi elemként is működik. Mivel ezek az eredmények nyilvánosan megoszthatók, a felhasználók megmutathatják ismerőseiknek, mennyit értek el, ami további inspirációt nyújthat számukra. A gamifikációs rendszer tehát nemcsak a tanulási folyamat hatékonyságát növeli, hanem a közösségépítést is támogatja.</p>
+        <p className="pl-[5.3rem] pt-6">A heti XP alapján lesz létrehozva továbbá egy ranglista, ami minden héten nullázódik, így bárkinek lehet esélye felkerülni rá. A ranglistának lesz dedikálva külön egy oldal, mivel több típusú ranglistát is szeretnénk létrehozni (legtöbb XP, legtöbb jó százalékkal végzett kurzus, stb.), amit majd a felhasználók a főoldalon lévő kupa ikonra kattintva érhetnek majd el.</p>
 
         <h2 id="hasznalhatosag" className="ml-8 text-xl font-bold text-sky-600 pt-6">4. Használhatóság - Usability</h2>
 
